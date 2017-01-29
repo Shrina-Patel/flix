@@ -19,3 +19,4 @@ public interface MovieInfoRepository {
 	public MovieInfo findByName(String name);
 
 }
+

@@ -5,6 +5,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
+import io.egen.flix_projectt.repository.CommentRepository;
 import io.egen.flix_projectt.entity.Comment;
 
 @Repository

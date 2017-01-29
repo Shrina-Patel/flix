@@ -6,10 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import io.egen.flix_project.entity.MovieInfo;
-import io.egen.flix_project.entity.User;
 
 @Entity
+
 public class Comment {
 	
 	@Id
@@ -53,5 +52,7 @@ public class Comment {
 		this.imdbId = imdbId;
 	}
 	
+	
 
 }
+

@@ -8,11 +8,13 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
+
 @Entity
 @NamedQueries({
 	@NamedQuery(name="MovieInfo.findAll",query="SELECT m FROM MovieInfo m"), 
 	@NamedQuery(name="MovieInfo.findByName",query="SELECT m FROM MovieInfo m WHERE m.movieName=:pName")
 })
+
 public class MovieInfo {
 
 	@Id
@@ -89,4 +91,10 @@ public class MovieInfo {
 	}
 	
 
+
+	
+	
+	
+	
 }
+

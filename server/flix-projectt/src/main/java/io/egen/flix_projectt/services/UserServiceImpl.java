@@ -1,4 +1,4 @@
-package io.egen.flix_projectt.service;
+package io.egen.flix_projectt.services;
 
 import javax.persistence.EntityNotFoundException;
 
@@ -48,3 +48,4 @@ public class UserServiceImpl implements UserService {
 	}
 
 }
+

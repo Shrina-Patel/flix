@@ -6,14 +6,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import io.egen.flix_projectt.entity.User;
-import io.egen.flix_projectt.service.UserService;
 
+
+import io.egen.flix_projectt.entity.User;
+import io.egen.flix_projectt.services.UserService;
 
 @RestController
 @RequestMapping(value="User")
 public class UserController {
-
+	
 	@Autowired
 	private UserService userService;
 	
@@ -32,4 +33,8 @@ public class UserController {
 		userService.delete(uId);
 	}
 
-}
+	
+	}
+	
+	
+

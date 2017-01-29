@@ -13,11 +13,12 @@ import javax.persistence.NamedQuery;
 	 
 	@NamedQuery(name="User.findByEmail",query="SELECT u FROM User u WHERE u.email=:pEmail")
 })
+
 public class User {
 	
 	@Id
 	private String uId;
-	private String Name;
+	private String name;
 	
 	@Column(unique = true)
 	private String email;
@@ -34,10 +35,10 @@ public class User {
 		this.uId = id;
 	}
 	public String getName() {
-		return Name;
+		return name;
 	}
-	public void setName(String name) {
-		Name = name;
+	public void setName(String Name) {
+		name = Name;
 	}
 	public String getEmail() {
 		return email;
@@ -52,5 +53,5 @@ public class User {
 		this.password = password;
 	}
 	
-
+	
 }

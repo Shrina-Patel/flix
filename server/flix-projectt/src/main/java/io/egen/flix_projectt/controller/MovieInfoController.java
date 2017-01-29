@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.egen.flix_project.entity.MovieInfo;
-import io.egen.flix_project.services.MovieInfoService;
+import io.egen.flix_projectt.entity.MovieInfo;
+import io.egen.flix_projectt.services.MovieInfoService;
 
 @RestController
 @RequestMapping(value="movieInfo")
-public class MovieController {
+public class MovieInfoController {
+	
 	
 	@Autowired
 	private MovieInfoService movieService;
@@ -46,5 +47,5 @@ public class MovieController {
 	public void delete(@PathVariable("id") String movieId){
 		movieService.delete(movieId);
 	}
-
 }
+

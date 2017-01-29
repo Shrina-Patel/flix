@@ -1,4 +1,4 @@
-package io.egen.flix_projectt.service;
+package io.egen.flix_projectt.services;
 
 import io.egen.flix_projectt.entity.User;
 

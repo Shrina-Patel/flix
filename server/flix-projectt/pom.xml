@@ -13,8 +13,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  
-   <build>
+
+  <build>
   	<plugins>
   		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
@@ -37,10 +37,9 @@
   		</plugin>
   	</plugins>
   </build>
-  
 
   <dependencies>
-       <dependency>
+    <dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-webmvc</artifactId>
 	    <version>4.3.4.RELEASE</version>

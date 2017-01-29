@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.egen.flix_projectt.entity.Comment;
-import io.egen.flix_projectt.service.CommentService;
-
+import io.egen.flix_projectt.services.CommentService;
 
 @RestController
 @RequestMapping(value="comment")
@@ -38,3 +37,4 @@ private CommentService service;
 	}
 
 }
+
