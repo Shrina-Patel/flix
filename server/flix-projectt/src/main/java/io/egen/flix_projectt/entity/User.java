@@ -10,12 +10,11 @@ import javax.persistence.NamedQuery;
 
 @Entity
 @NamedQueries({
-	@NamedQuery(name = "User.findAll", query = "SELECT u FROM User u ORDER BY u.email ASC"),
+	 
 	@NamedQuery(name="User.findByEmail",query="SELECT u FROM User u WHERE u.email=:pEmail")
 })
 
 public class User {
-	
 	
 	@Id
 	private String uId;
@@ -24,7 +23,6 @@ public class User {
 	@Column(unique = true)
 	private String email;
 	private String password;
-	private String role;
 	
 	public  User(){
 		
@@ -54,16 +52,6 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
-	}
 	
-	@Override
-	public String toString() {
-		return "User [uId=" + uId + ", name=" + name + ", email=" + email + ", password=" + password + ", role=" + role
-				+ "]";
-	}
+	
 }

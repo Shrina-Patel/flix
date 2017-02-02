@@ -12,11 +12,7 @@ import javax.persistence.NamedQuery;
 @Entity
 @NamedQueries({
 	@NamedQuery(name="MovieInfo.findAll",query="SELECT m FROM MovieInfo m"), 
-	@NamedQuery(name="MovieInfo.findByName",query="SELECT m FROM MovieInfo m WHERE m.movieName=:pName"),
-	@NamedQuery(name = "Movie.filterByGenre", query = "SELECT m FROM MovieInfo m WHERE m.genre LIKE :pGenre"),
-	@NamedQuery(name = "Movie.filterByImdbRating", query = "SELECT m FROM MovieInfo m WHERE m.movieRate BETWEEN :pRatingGT and :pRatingLT"),
-	@NamedQuery(name = "Movie.filterByVotes", query = "SELECT m FROM Movie m WHERE m.imdbVotes BETWEEN :pVotesGT and :pVotesLT")
-
+	@NamedQuery(name="MovieInfo.findByName",query="SELECT m FROM MovieInfo m WHERE m.movieName=:pName")
 })
 
 public class MovieInfo {
@@ -30,29 +26,8 @@ public class MovieInfo {
 	private String moiveRate;
 	private String releaseYear;
 	private String releaseDate;
-	private String Genre;
-	private String language;
-
 	
-	public String getGenre() {
-		return Genre;
-	}
-
-
-	public void setGenre(String genre) {
-		Genre = genre;
-	}
-
-
-	public String getLanguage() {
-		return language;
-	}
-
-
-	public void setLanguage(String language) {
-		this.language = language;
-	}
-
+	
 	
 	
 	public String getReleaseYear() {
@@ -113,14 +88,6 @@ public class MovieInfo {
 	}
 	public void setMoiveRate(String moiveRate) {
 		this.moiveRate = moiveRate;
-	}
-
-
-	@Override
-	public String toString() {
-		return "MovieInfo [imdbID=" + imdbID + ", movieName=" + movieName + ", movieDirector=" + movieDirector
-				+ ", movieWriter=" + movieWriter + ", moiveRate=" + moiveRate + ", releaseYear=" + releaseYear
-				+ ", releaseDate=" + releaseDate + ", Genre=" + Genre + ", language=" + language + "]";
 	}
 	
 

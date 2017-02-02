@@ -5,18 +5,9 @@ import java.util.UUID;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
 
 
 @Entity
-@Table
-@NamedQueries({
-	@NamedQuery(name = "Comment.findCommentsByMovie", query = "SELECT c FROM Comment c WHERE c.imdbID = :pMovie"),
-	@NamedQuery(name = "Comment.findCommentsByUser", query = "SELECT c FROM Comment c WHERE c.uId = :pUser")
-})
-
 
 public class Comment {
 	
@@ -57,14 +48,8 @@ public class Comment {
 	public MovieInfo getImdbId() {
 		return imdbId;
 	}
-	
 	public void setImdbId(MovieInfo imdbId) {
 		this.imdbId = imdbId;
-	}
-	
-	@Override
-	public String toString() {
-		return "Comment [Comment_Id=" + Comment_Id + ", msg=" + msg + ", uId=" + uId + ", imdbId=" + imdbId + "]";
 	}
 	
 	
