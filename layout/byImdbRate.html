@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="user.css">
+</head>
+
+<body>
+<div class="width">
+	<h1>MovieFlix</h1>
+</div>
+
+
+<ul class="topnav">
+  <li><a  href="User.html">Home</a></li>
+  <li><a  href="ratedMovie.html">Top Rated Movies</a></li> 
+  <li class="dropdown" >
+    <a class="active" href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Sort by</a>
+    <div class="dropdown-content" id="myDropdown">
+      <a  href="byImdbRate.html">IMDB rate</a>
+      <a href="byYear.html">Year</a>
+      
+    </div>
+  </li>
+<!--  <li><a href="byImdbRate.html">By Imdb Rate</a></li>
+<!-- <li><a  href="byYear.html">By Year</a></li> -->
+  
+  <li class="right"><a href="login.html">Sign Out</a></li>
+</ul>
+
+
+<div style="padding:0 16px;">
+  
+</div>
+<div>
+	<br><br>
+</div>
+
+<div>
+  <table>
+  <tr>
+    <th>Movie Name</th>
+    <th>Imdb Rate</th>
+  </tr>
+  <tr>
+    <th>Harry Potter</th>
+    <th>8.5</th>
+  </tr>
+  <tr>
+    <th>Titanic</th>
+    <th>8.00</th>
+  </tr>
+  <tr>
+    <th>Batman</th>
+    <th>7.5</th>
+  </tr>
+  <tr>
+    <th>Supperman</th>
+    <th>7.00</th>
+  </tr>
+  <tr>
+    <th>Princess Protection</th>
+    <th>7.00</th>
+  </tr>
+  </table>
+
+
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+</body>
+</html>
