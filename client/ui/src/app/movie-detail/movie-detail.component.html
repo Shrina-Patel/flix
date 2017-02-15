@@ -1,0 +1,12 @@
+<a [routerLink]="['../']" class="btn btn-primary">&lt; Back</a>
+
+<h1>Movie Detail</h1>
+<hr>
+<div class="row">
+    <div class="col-sm-4">
+        <img [src]="movie.profilePic" *ngIf="movie.profilePic" class="img-responsive">
+    </div>
+    <div class="col-sm-8">
+        <p>{{movie.firstName}} {{movie.lastName}}</p>
+    </div>
+</div>
